@@ -1,7 +1,7 @@
 import React from "react";
 import {Form, Formik, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
-import styles from "./RegisterForm.module.scss";
+import styles from "./RegisterForm.module.css";
 
 interface FormValues {
     email: string;
@@ -24,7 +24,7 @@ export const RegisterForm: React.FC = () => {
         <div>
             <h1 className={styles.name}>Registration</h1>
             <Formik initialValues={initialValues} onSubmit={() => {}} validationSchema={validationSchema}>
-                <Form>
+                <Form className="mt-5">
                     <Field type="email" name="email" palceholder="Enter your email..."></Field>
                     <ErrorMessage name="email" component="span" className="form-error-message"/>
 
