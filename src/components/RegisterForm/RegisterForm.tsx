@@ -1,5 +1,5 @@
 import React from "react";
-import {Form, Formik, Field, ErrorMessage} from "formik";
+import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import styles from "./RegisterForm.module.css";
 
@@ -14,10 +14,10 @@ export const RegisterForm: React.FC = () => {
         email: "",
         password: "",
         confirmPassword: "",
-    }
+    };
 
     const validationSchema = Yup.object({
-        email: Yup.string().required("Email must be a valid email")
+        email: Yup.string().required("Email must be a valid email"),
     });
 
     return (
@@ -26,15 +26,15 @@ export const RegisterForm: React.FC = () => {
             <Formik initialValues={initialValues} onSubmit={() => {}} validationSchema={validationSchema}>
                 <Form className="mt-5">
                     <Field type="email" name="email" palceholder="Enter your email..."></Field>
-                    <ErrorMessage name="email" component="span" className="form-error-message"/>
+                    <ErrorMessage name="email" component="span" className="form-error-message" />
 
                     <Field type="password" name="password" placeholder="Password"></Field>
-                    <ErrorMessage name="password" component="span" className="form-error-message"/>
+                    <ErrorMessage name="password" component="span" className="form-error-message" />
 
                     <Field type="password" name="confirmpassword" placeholder="Repeat the password..."></Field>
-                    <ErrorMessage name="confirmpassword" component="span" className="form-error-message"/>
+                    <ErrorMessage name="confirmpassword" component="span" className="form-error-message" />
                 </Form>
             </Formik>
         </div>
-    )
-}
+    );
+};
