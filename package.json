@@ -5,31 +5,26 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
     "build": "tsc -b && vite build",
-    "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix && prettier \"**/*.{ts,tsx,scss}\" --write",
     "preview": "vite preview"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
+    "@tailwindcss/vite": "^4.0.17",
+    "antd": "^5.24.6",
+    "formik": "^2.4.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "@typescript-eslint/eslint-plugin": "^8.26.0",
-    "@typescript-eslint/parser": "^8.26.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.21.0",
-    "eslint-config-prettier": "^10.0.2",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "~5.7.2",
-    "vite": "^6.2.0"
+    "vite": "^6.2.4"
   }
 }

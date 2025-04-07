@@ -1,8 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { RegisterForm } from "./components/RegisterForm/RegisterForm";
+import "./assets/styles/index.css";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-  </StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+        <RegisterForm />
+    </StrictMode>
+);
