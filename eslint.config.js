@@ -75,6 +75,7 @@ export default [
             "react/jsx-curly-spacing": ["error", { when: "never" }],
             "no-console": "warn",
             "react/display-name": "off",
+            "react/no-unescaped-entities": "off",
         },
     },
     {
